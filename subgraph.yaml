@@ -1,0 +1,88 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: RisqMATICPool
+    network: matic
+    source:
+      address: "0x5454F33E563963ba578cefa1A4E3cB6B42F73422"
+      abi: RisqMATICPool
+      startBlock: 20645535
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Provide
+      abis:
+        - name: RisqMATICPool
+          file: ./abis/RisqMATICPool.json
+      eventHandlers:
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: RisqWBTCPool
+    network: matic
+    source:
+      address: "0x5d6e644ebee654a78beb1207f33ce79ca475fd4e"
+      abi: RisqMATICPool
+      startBlock: 20645535
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Provide
+      abis:
+        - name: RisqMATICPool
+          file: ./abis/RisqMATICPool.json
+      eventHandlers:
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+      file: ./src/mapping.ts
+
+  - kind: ethereum/contract
+    name: RisqETHPool
+    network: matic
+    source:
+      address: "0x6249C0e395Ab75f047183B21d2755babBD795A6f"
+      abi: RisqMATICPool
+      startBlock: 20645535
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Provide
+      abis:
+        - name: RisqMATICPool
+          file: ./abis/RisqMATICPool.json
+      eventHandlers:
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+      file: ./src/mapping.ts
+
+  - kind: ethereum/contract
+    name: RisqLINKPool
+    network: matic
+    source:
+      address: "0x7095b510f402463df8db51de869629f7094487c2"
+      abi: RisqMATICPool
+      startBlock: 20645535
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Provide
+      abis:
+        - name: RisqMATICPool
+          file: ./abis/RisqMATICPool.json
+      eventHandlers:
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+      file: ./src/mapping.ts
+
+  

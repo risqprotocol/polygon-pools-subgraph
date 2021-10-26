@@ -1,0 +1,16 @@
+{
+  "name": "polygon-pools",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ risqprotocol/polygon-pools",
+    "create-local": "graph create --node http://localhost:8020/ risqprotocol/polygon-pools",
+    "remove-local": "graph remove --node http://localhost:8020/ risqprotocol/polygon-pools",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 risqprotocol/polygon-pools"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.21.0",
+    "@graphprotocol/graph-ts": "0.20.0"
+  }
+}

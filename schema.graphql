@@ -1,0 +1,9 @@
+type ProvideType @entity{
+  id: ID!
+  account: Bytes!
+  contract: Bytes! # the EOA that initiated the txn
+  amount: BigInt! # uint256
+  writeAmount: BigInt! # uint256
+  blockNumber: BigInt!
+  timestamp: BigInt!
+}
